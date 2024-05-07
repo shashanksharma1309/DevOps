@@ -1,0 +1,61 @@
+Create a New IAM User:
+
+1.Create a new IAM user with programmatic access.
+Assign appropriate permissions to the user based on their role or responsibilities.
+Generate and securely provide the user's access key and secret access key.
+Configure IAM Roles:
+
+2.Create an IAM role for EC2 instances or Lambda functions with specific permissions.
+Attach policies to the role that grant necessary permissions to access AWS resources.
+Assign the role to EC2 instances or Lambda functions.
+
+3.Implement Multi-Factor Authentication (MFA):
+
+Enable MFA for IAM users to provide an additional layer of security.
+Guide users on how to set up MFA devices (such as virtual MFA apps or hardware tokens).
+Test the MFA configuration to ensure it functions correctly.
+Create IAM Policies:
+
+4.Write a custom IAM policy that allows or denies specific actions on AWS resources.
+Associate the policy with the appropriate IAM users, groups, or roles.
+Test the policy to verify that the desired access control is enforced.
+Use IAM Groups:
+
+5.Create an IAM group and assign permissions to it.
+Add IAM users to the group to manage their access collectively.
+Remove users from the group when their access requirements change.
+Implement IAM Access Analyzer:
+
+
+6.Define and enforce password policies for IAM users.
+Set requirements such as minimum password length, complexity, and expiration.
+Regularly remind users to update their passwords according to the policy.
+
+7.Create user Shubham.shubham can only launch ec2 instance in Mumbai 
+region
+
+8.Scenario: You are a DevOps engineer responsible for managing AWS resources for your company's e-commerce application. Your company uses S3 to store product images, and you need to grant specific permissions to different teams within your organization.
+
+Task: Your task is to set up IAM users and policies to manage access to the S3 buckets containing product images. Here are the steps you need to follow:
+
+Create IAM Groups:
+
+Create two IAM groups: "Marketing" and "Developers."
+Create IAM Policies:
+
+Create an IAM policy called "MarketingAccess" that allows read-only access to the S3 bucket containing product images. Attach this policy to the "Marketing" group.
+Create an IAM policy called "DevAccess" that allows both read and write access to the same S3 bucket. Attach this policy to the "Developers" group.
+Create IAM Users:
+
+Create two IAM users: "Shubham" and "Deepak"
+Add "Shubham" to the "Marketing" group and "Deepak" to the "Developers" group.
+Configure S3 Bucket Permissions:
+
+Configure the S3 bucket containing product images with a bucket policy that allows read-only access for the "Marketing" group and read/write access for the "Developers" group.
+Testing:
+
+Log in to the AWS Management Console as "Shubham" (Marketing team) and verify that he can only read the product images from the S3 bucket.
+Log in to the AWS Management Console as "Deepak" (Developers team) and verify that he can both read and write product images to the S3 bucket.
+Documentation:
+
+Document the IAM user setup, policies, and bucket policies for future reference.
